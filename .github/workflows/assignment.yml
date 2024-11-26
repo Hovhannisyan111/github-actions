@@ -4,8 +4,6 @@ on:
   push:
     branches:
       - main
-      - lesson1
-    
 jobs:
   Assignment:
     runs-on: ubuntu-latest

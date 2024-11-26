@@ -4,7 +4,7 @@ on:
   push:
     branches:
       - main
-      - lesson2
+      - lesson1
     
 jobs:
   Assignment:

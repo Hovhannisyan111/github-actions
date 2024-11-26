@@ -4,7 +4,6 @@ on:
   push:
     branches:
       - main
-      - lesson2
 
 jobs:
   node:

@@ -1,0 +1,14 @@
+name: Practical-Test-1
+
+on:
+  push:
+    branches:
+      - main
+      - lesson1
+
+jobs:
+  print:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Print
+        run: echo "Hello, world"

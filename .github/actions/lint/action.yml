@@ -1,12 +1,9 @@
-name: Lint Code
-description: A custom action for linting JavaScript code
+name: Lint Action
+description: Lints JavaScript files and fixes style issues.
 inputs:
   target:
-    description: "The directory or files to lint"
+    description: "The target files or directory to lint."
     required: true
-outputs:
-  lint-result:
-    description: "The result of the linting process"
 runs:
   using: "node16"
   main: "index.js"

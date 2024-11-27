@@ -32,4 +32,4 @@ jobs:
       - name: Run custom lint action
         uses: ./.github/actions/lint
         with:
-          target: "src/*.js"
+          target: "src/**/*.js"

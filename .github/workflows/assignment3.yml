@@ -30,6 +30,6 @@ jobs:
         uses: actions/checkout@v4
 
       - name: Run custom lint action
-        uses: ./github/actions/lint
+        uses: ./.github/actions/lint
         with:
           target: "src/*.js"

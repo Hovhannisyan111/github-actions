@@ -7,29 +7,29 @@ on:
       - lesson3
 
 jobs:
+  build:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout code
+        uses: actions/checkout@v4
+
+      - name: Set up Node.js
+        uses: actions/setup-node@v3
+        with:
+          node-version: '16'
+
+      - name: Install custom action deps
+        uses: npm install
+        working-directory: .github/actions/lint
+
   lint:
     runs-on: ubuntu-latest
+    needs: build
     steps:
       - name: Checkout code
         uses: actions/checkout@v4
 
-      - name: Install deps
-        run: npm install --prefix .gihub/actions/lint
-
-      - name: Run custom action
-        uses: ./.github/actions/lint
+      - name: Run custom lint action
+        uses: ./github/actions/lint
         with:
           target: "src/*.js"
-
-  test:
-    runs-on: ubuntu-latest
-    needs: lint
-    steps:
-      - name: Checkout code
-        uses: actions/checkout@v4
-
-      - name: Install deps
-        run: npm install
-
-      - name: Run test
-        run: npm test

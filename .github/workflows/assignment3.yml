@@ -19,7 +19,7 @@ jobs:
           node-version: '16'
 
       - name: Install custom action deps
-        uses: npm install
+        run: npm install
         working-directory: .github/actions/lint
 
   lint:

@@ -1,0 +1,15 @@
+{
+  "name": "my-repo",
+  "version": "1.0.0",
+  "description": "A sample repository demonstrating a custom GitHub Action",
+  "main": "index.js",
+  "scripts": {
+    "lint": "eslint src/*.js",
+    "test": "echo 'No tests specified' && exit 0"
+  },
+  "author": "Your Name",
+  "license": "MIT",
+  "devDependencies": {
+    "eslint": "^8.48.0"
+  }
+}

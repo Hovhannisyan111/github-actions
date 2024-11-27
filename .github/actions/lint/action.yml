@@ -1,0 +1,10 @@
+name: Lint Code
+description: A custom action to lint code using ESLint
+author: Arman
+runs:
+  using: node16
+  main: index.js
+inputs:
+  target:
+    description: The target directory or files to lint
+    required: true

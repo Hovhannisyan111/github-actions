@@ -1,0 +1,26 @@
+name: Practical Test
+
+on:
+  push:
+    branches:
+      - main
+      - lesson3
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    env:
+      APP_ENV: production
+
+    steps:
+      - name: Checkout the code
+        uses: actions/checkout@v4
+
+      - name: Set up python
+        uses: actions/setup-python@v4
+        with:
+          python-version: '3.10'
+
+      - name: Run build command
+        run: |
+

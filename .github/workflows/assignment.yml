@@ -62,4 +62,6 @@ jobs:
             ${{ runner.os }}-pip-
 
       - name: Run tests
+        env:
+          PYTHONPATH: ${{ github.workspace }}
         run: pytest --verbose

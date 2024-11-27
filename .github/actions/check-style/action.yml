@@ -10,7 +10,9 @@ runs:
   using: composite
   steps:
     - name: Install flake8
-      run: pip install -r requirements.txt
+      run: pip install -r assignment/requirements.txt
+      shell: bash
+
     - name: Run flake8
       run: flake8 ${{ inputs.directory }}
       shell: bash

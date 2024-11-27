@@ -1,6 +1,5 @@
 name: Lint Code
 description: A custom action for linting JavaScript code
-author: Arman
 inputs:
   target:
     description: "The directory or files to lint"
@@ -11,8 +10,3 @@ outputs:
 runs:
   using: "node16"
   main: "index.js"
-pre:
-  steps:
-    - name: Install Action Dependencies
-      run: npm install
-      working-directory: ${{ github.action_path }}

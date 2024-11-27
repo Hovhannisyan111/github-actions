@@ -1,8 +1,0 @@
-{
-  "name": "actions-project",
-  "version": "1.0.0",
-  "scripts": {
-    "build": "your-build-command-here",
-    "test": "node test.js"
-  }
-}

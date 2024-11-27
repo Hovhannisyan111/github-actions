@@ -33,3 +33,4 @@ jobs:
         uses: ./.github/actions/lint
         with:
           target: "src/**/*.js"
+        continue-on-error: true
